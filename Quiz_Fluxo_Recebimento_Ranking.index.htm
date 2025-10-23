@@ -1,44 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv=Content-Type content="text/html; charset=unicode">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
 <title>Quiz Interativo - Fluxo do Recebimento</title>
 <style>
-  body {
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(180deg, #e7f0fd, #f5f7fa);
-    color: #333;
-    margin: 0;
-    padding: 20px;
+<!--
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
   }
-  h1 {
-    text-align: center;
-    background: #005fa3;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-  .start-screen, .end-screen {
-    max-width: 700px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    animation: fadeInUp 1s ease;
-  }
-  .start-screen input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: 80%;
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  button {
+body
+	{background: linear-gradient(180deg, #e7f0fd, #f5f7fa);}
+h1
+	{border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);}
+.START-SCREEN
+	{border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	animation: fadeInUp 1s ease;}
+.END-SCREEN
+	{border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	animation: fadeInUp 1s ease;}
+.START-SCREEN input
+	{border-radius: 8px;}
+button {
     background-color: #0078d7;
     color: white;
     border: none;
@@ -49,88 +38,187 @@
     margin: 15px auto;
     transition: 0.3s;
   }
-  button:hover { background-color: #005fa3; transform: scale(1.05); }
-  .quiz-container {
-    max-width: 850px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: none;
-  }
-  .question { font-weight: bold; margin-top: 15px; }
-  .options label { display: block; margin: 8px 0; cursor: pointer; }
-  .correct { background: #e8f9f0; border-left: 6px solid #2ecc71; color: #2b8a3e; padding: 8px; border-radius: 6px; }
-  .incorrect { background: #fdecea; border-left: 6px solid #e74c3c; color: #c0392b; padding: 8px; border-radius: 6px; }
-  .timer { text-align: center; font-size: 20px; font-weight: bold; color: #005fa3; margin-top: 10px; }
-  .medal { font-size: 80px; animation: bounceIn 1s ease; }
-  .gold { color: gold; }
-  .silver { color: silver; }
-  .bronze { color: #cd7f32; }
-  .ranking {
-    background: #eef6ff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: left;
-  }
-  .ranking h4 { text-align: center; color: #005fa3; }
-  .ranking ol { padding-left: 25px; }
-  @keyframes bounceIn {
-    0% { transform: scale(0.3); opacity: 0; }
-    50% { transform: scale(1.1); opacity: 1; }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); }
-  }
+button:hover { background-color: #005fa3; transform: scale(1.05); }
+.QUIZ-CONTAINER
+	{border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);}
+.OPTIONS label
+	{cursor: pointer;}
+.CORRECT
+	{border-radius: 6px;}
+.INCORRECT
+	{border-radius: 6px;}
+.MEDAL
+	{animation: bounceIn 1s ease;}
+.RANKING
+	{border-radius: 10px;}
+
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Aptos Display";}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+h1
+	{mso-style-link:"Título 1 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:center;
+	background:#005FA3;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	color:white;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Título 2 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.Ttulo1Char
+	{mso-style-name:"Título 1 Char";
+	mso-style-link:"Título 1";
+	font-family:"Aptos Display",sans-serif;
+	color:#0F4761;}
+span.Ttulo2Char
+	{mso-style-name:"Título 2 Char";
+	mso-style-link:"Título 2";
+	font-family:"Aptos Display",sans-serif;
+	color:#0F4761;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
 </style>
+
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<h1>Quiz Interativo – Fluxo do Recebimento</h1>
+
+<body lang=PT-BR style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<h1><span style='font-family:"Segoe UI",sans-serif'>Quiz Interativo – Fluxo do
+Recebimento</span></h1>
 
 <!-- Tela inicial -->
-<div id="startScreen" class="start-screen">
-  <h2>🧠 Bem-vindo(a) ao Desafio do Conferente!</h2>
-  <p>
-    Teste seus conhecimentos sobre o <strong>Fluxo do Recebimento</strong>.<br><br>
-    ⏱ Você terá <strong>3 minutos</strong> para responder <strong>7 perguntas</strong>.<br>
-    💡 Cada resposta traz uma explicação didática.<br><br>
-    Digite seu nome para começar:
-  </p>
-  <input type="text" id="playerName" placeholder="Digite seu nome aqui">
-  <br>
-  <button onclick="startQuiz()">🚀 Iniciar Quiz</button>
-  <button onclick="showRanking()">🏆 Mostrar Ranking Atual</button>
-  <div class="ranking" id="rankingPreview" style="display:none;">
-    <h4>🏅 Top 3 Alunos</h4>
-    <ol id="rankingListPreview"></ol>
-  </div>
+
+<div style='margin-top:30.0pt;margin-bottom:30.0pt' id=startScreen>
+
+<h2 align=center style='text-align:center;background:white'><span
+style='font-family:"Segoe UI Emoji",sans-serif;color:#333333'>&#129504;</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'> Bem-vindo(a) ao
+Desafio do Conferente!</span></h2>
+
+<p align=center style='text-align:center;background:white'><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'>Teste seus
+conhecimentos sobre o <strong><span style='font-family:"Segoe UI",sans-serif'>Fluxo
+do Recebimento</span></strong>.<br>
+<br>
+</span><span style='font-family:"Segoe UI Symbol",sans-serif;color:#333333'>⏱</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'> Você terá <strong><span
+style='font-family:"Segoe UI",sans-serif'>3 minutos</span></strong> para
+responder <strong><span style='font-family:"Segoe UI",sans-serif'>7 perguntas</span></strong>.<br>
+</span><span style='font-family:"Segoe UI Emoji",sans-serif;color:#333333'>&#128161;</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'> Cada resposta traz uma
+explicação didática.<br>
+<br>
+Digite seu nome para começar: </span></p>
+
+<input type=text id=playerName placeholder="Digite seu nome aqui">
+
+<p class=MsoNormal align=center style='text-align:center;background:white'><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'><br>
+</span><span style='font-family:"Segoe UI Emoji",sans-serif;color:#333333'><button onclick="startQuiz()">&#128640;</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'> Iniciar Quiz</button> </span><span
+style='font-family:"Segoe UI Emoji",sans-serif;color:#333333'><button onclick="showRanking()">&#127942;</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'> Mostrar Ranking Atual</button>
+</span></p>
+
+<div style='margin-top:15.0pt' id=rankingPreview>
+
+<p class=MsoNormal align=center style='text-align:center;background:#EEF6FF'><b><span
+style='font-family:"Segoe UI Emoji",sans-serif;color:#005FA3;display:none'>&#127941;</span></b><b><span
+style='font-family:"Segoe UI",sans-serif;color:#005FA3;display:none'> Top 3
+Alunos</span></b></p>
+
+<ul id="rankingListPreview"></ul>
+
+</div>
+
 </div>
 
 <!-- Quiz -->
-<div class="timer" id="timerContainer" style="display:none;">⏱ Tempo restante: <span id="timer">03:00</span></div>
-<div class="quiz-container" id="quiz"></div>
-<button id="verifyBtn" style="display:none;" onclick="checkAnswers()">Verificar Respostas</button>
 
-<!-- Tela final -->
-<div id="endScreen" class="end-screen" style="display:none;">
-  <h2>🏁 Resultado Final</h2>
-  <div id="medalDisplay" class="medal"></div>
-  <h3 id="scoreMessage"></h3>
-  <div class="ranking">
-    <h4>🏆 Ranking da Turma</h4>
-    <ol id="rankingList"></ol>
-  </div>
-  <button onclick="restartQuiz()">🔄 Jogar Novamente</button>
+<div style='margin-top:7.5pt; display:none;' id=quiz></div>
+
+<div style='margin-top:7.5pt' id=timerContainer>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:15.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#005FA3;
+display:none'>⏱</span></b><b><span style='font-size:15.0pt;font-family:"Segoe UI",sans-serif;
+color:#005FA3;display:none'> Tempo restante: <span id=timer>03:00</span></span></b></p>
+
 </div>
 
-<!-- Sons -->
-<audio id="soundCorrect" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
-<audio id="soundWrong" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
-<audio id="soundEnd" src="https://actions.google.com/sounds/v1/cartoon/concussive_drum_hit.ogg"></audio>
+<p class=MsoNormal><span style='font-family:"Segoe UI",sans-serif;color:#333333'><button id="verifyBtn" style="display:none;" onclick="checkAnswers()">Verificar
+Respostas</button> </span></p>
 
-<script>
+<!-- Tela final -->
+
+<div style='margin-top:30.0pt;margin-bottom:30.0pt; display:none;' id=endScreen>
+
+<h2 align=center style='text-align:center;background:white'><span
+style='font-family:"Segoe UI Emoji",sans-serif;color:#333333;display:none'>&#127937;</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333;display:none'> Resultado
+Final</span></h2>
+
+<div style='margin-top:15.0pt'>
+
+<div align="center" id="medalDisplay" style="font-size: 60px;"></div>
+<div align="center" id="scoreMessage" style="font-size: 22px; margin: 12px 0;"></div>
+
+<p class=MsoNormal align=center style='text-align:center;background:#EEF6FF'><b><span
+style='font-family:"Segoe UI Emoji",sans-serif;color:#005FA3;'>🏆</span></b><b><span
+style='font-family:"Segoe UI",sans-serif;color:#005FA3;'> Ranking
+da Turma</span></b></p>
+<ul id="rankingList"></ul>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center;background:white'><span
+style='font-family:"Segoe UI Emoji",sans-serif;color:#333333'><button onclick="restartQuiz()">&#128260;</span><span
+style='font-family:"Segoe UI",sans-serif;color:#333333'> Jogar
+Novamente</button> </span></p>
+
+</div>
+
+<p class=MsoNormal><script>
 const quizData = [
   {question:"1. Qual é a primeira etapa do fluxo de recebimento de materiais em uma empresa?",
   options:["A conferência quantitativa","A entrada da nota fiscal no sistema","A triagem na portaria","O armazenamento dos produtos"],
@@ -263,6 +351,10 @@ function startTimer() {
     if (timeLeft < 0) { clearInterval(timer); checkAnswers(); }
   }, 1000);
 }
-</script>
+</script><!-- Sons --><audio id="soundCorrect" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio><audio id="soundWrong" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio><audio id="soundEnd" src="https://actions.google.com/sounds/v1/cartoon/concussive_drum_hit.ogg"></audio>&nbsp;</p>
+
+</div>
+
 </body>
+
 </html>
