@@ -1,5 +1,3 @@
-[Quiz_Fluxo_Recebimento_Ranking.htm](https://github.com/user-attachments/files/23090159/Quiz_Fluxo_Recebimento_Ranking.htm)
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
